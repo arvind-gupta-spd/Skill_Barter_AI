@@ -1,0 +1,73 @@
+/* Avatar styles */
+.avatar-inline {
+    width: 36px;
+    height: 36px;
+    border-radius: 9999px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    background-color: #f3f4f6;
+}
+.avatar-lg {
+    width: 96px;
+    height: 96px;
+    border-radius: 9999px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    background-color: #f3f4f6;
+}
+
+/* Hero Section Background */
+.hero-bg {
+    background: linear-gradient(to top, rgba(17, 24, 39, 0.8) 0%, rgba(79, 70, 229, 0.5) 100%), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+/* AI Matcher Blinking Cursor */
+.blinking-cursor {
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+    from, to { border-right-color: transparent; }
+    50% { border-right-color: orange; }
+}
+
+/* Modal Transition Effects */
+.modal { 
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+}
+.modal-content { 
+    transition: transform 0.3s ease; 
+}
+
+/* Button Glow Effect */
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Upload button states */
+#choose-avatar-btn {
+    border: 1px solid #e5e7eb;
+}
+#upload-avatar-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Contact section transition for skill card */
+.contact-section {
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+    opacity: 0;
+    visibility: hidden;
+}
+.contact-section.opacity-100 {
+    opacity: 1;
+    visibility: visible;
+}
+.contact-section.opacity-0 {
+    opacity: 0;
+    visibility: hidden;
+}
