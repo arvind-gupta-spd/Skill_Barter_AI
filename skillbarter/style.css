@@ -1,0 +1,106 @@
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5,h6 { font-family: 'Lexend', sans-serif; }
+
+
+.avatar-inline {
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  background-color: #f3f4f6;
+}
+.avatar-lg {
+  width: 96px;
+  height: 96px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  background-color: #f3f4f6;
+}
+
+
+.hero-bg {
+  background: linear-gradient(to top, rgba(17, 24, 39, 0.8) 0%, rgba(79, 70, 229, 0.5) 100%), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.blinking-cursor { animation: blink 1s step-end infinite; }
+@keyframes blink { from,to { border-right-color: transparent; } 50% { border-right-color: orange; } }
+
+
+.modal { transition: opacity 0.3s ease, visibility 0.3s ease; }
+.modal-content { transition: transform 0.3s ease; padding: 1rem; }
+
+
+.modal-content > .p-4, .modal-content > .p-6 { padding-right: 3rem; }
+.header-with-space { padding-right: 2.5rem; }
+
+
+.btn-glow:hover { box-shadow: 0 0 20px rgba(99,102,241,0.5); transform: translateY(-2px); }
+
+
+#choose-avatar-btn { border: 1px solid #e5e7eb; }
+#upload-avatar-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+
+.chat-bubble { max-width: 70%; padding: .5rem 1rem; border-radius: .5rem; }
+.chat-bubble.me { background: #4f46e5; color: #fff; margin-left: auto; }
+.chat-bubble.them { background: #fff; color: #111827; border: 1px solid #e5e7eb; margin-right: auto; }
+
+
+video { width: 100%; border-radius: 8px; background: #000; }
+
+
+#notifs-list .p-3 { padding-right: 4rem; }
+
+
+.text-muted { color: #6b7280; }
+.skill-card { overflow: hidden; box-sizing: border-box; }
+
+
+.skill-card .flex-1,
+.flex-1 { min-width: 0; }
+
+
+.skill-card p,
+.skill-card .text-sm,
+.skill-card .font-semibold {
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+
+.skill-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+.skill-card .avatar-inline { flex-shrink: 0; }
+
+
+.skill-email {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 16rem;
+}
+
+
+@media (max-width: 480px) {
+  .skill-card p { -webkit-line-clamp: 6; }
+  .skill-email { max-width: 12rem; }
+}
