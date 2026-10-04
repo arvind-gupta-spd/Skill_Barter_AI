@@ -38,7 +38,7 @@ const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__f
   measurementId: "G-C41FT4VF07"
 };
 
-export const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+export const appId = 'skill-barter-ai';
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
